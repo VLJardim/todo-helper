@@ -1,0 +1,56 @@
+# Builds the Windows installer and the macOS disk image, and attaches them to a GitHub Release.
+# Runs when you push a version tag: git tag v0.1.0 && git push origin v0.1.0
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            args: ""
+          - os: macos-latest
+            args: --target universal-apple-darwin
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.os == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      - run: npm ci
+      - uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: todo-helper ${{ github.ref_name }}
+          releaseBody: |
+            ## Download
+
+            - **Windows**: `todo-helper_*_x64-setup.exe`
+            - **macOS** (Apple silicon and Intel): `todo-helper_*_universal.dmg`
+
+            The installers aren't code-signed, so your computer warns you the first time:
+
+            - **Windows**: on "Windows protected your PC", select **More info**, then **Run anyway**.
+            - **macOS**: drag the app to Applications and open it. When macOS blocks it, open **System Settings**, then **Privacy & Security**, and select **Open Anyway**. If macOS says the app is damaged, run `xattr -cr /Applications/todo-helper.app` in Terminal.
+
+            Then connect your sources with [SETUP.md](https://github.com/VLJardim/todo-helper/blob/main/SETUP.md), from section 2.
+          releaseDraft: false
+          prerelease: false
+          args: ${{ matrix.args }}

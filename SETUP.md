@@ -10,6 +10,8 @@ The app runs on Windows and macOS. Outlook (section 4) only works on Windows; ev
 
 ## 1. Build and install the app
 
+To skip the build, download the installer from the [latest release](https://github.com/VLJardim/todo-helper/releases/latest) instead, run it, and go to the Check at the end of this section.
+
 About 10 minutes, most of it waiting for the build.
 
 ### On Windows

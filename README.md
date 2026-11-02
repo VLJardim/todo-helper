@@ -12,11 +12,22 @@ Runs on Windows and macOS. Everything stays on your computer in one SQLite file,
 - **Calendar**: your itslearning and Google or iCloud calendars, plus an optional shared calendar on your own Supabase project.
 - **Notes**: plain-text notes that save on every keystroke, and can link to a card.
 
+## Download
+
+Get the installer from the [latest release](https://github.com/VLJardim/todo-helper/releases/latest):
+
+- **Windows**: `todo-helper_..._x64-setup.exe`
+- **macOS** (Apple silicon and Intel): `todo-helper_..._universal.dmg`
+
+The installers aren't code-signed, so your computer warns you the first time. On Windows, select **More info**, then **Run anyway**. On macOS, open **System Settings**, then **Privacy & Security**, and select **Open Anyway**.
+
 ## Get started
 
-Follow [SETUP.md](SETUP.md). Section 1 builds and installs the app in about 10 minutes; each later section connects one source and ends with a check. Skip any source you don't use.
+After you install the app, connect your sources with [SETUP.md](SETUP.md), from section 2. Each section takes 2 to 10 minutes and ends with a check. Skip any source you don't use.
 
-You need Node.js 22 or later, Rust, and Claude Code for the email and Discord sources. Outlook works only with classic Outlook on Windows.
+The email and Discord sources need Claude Code. Outlook works only with classic Outlook on Windows.
+
+To build the app yourself instead, follow SETUP.md section 1. You need Node.js 22 or later and Rust.
 
 ## Stack
 
