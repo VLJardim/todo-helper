@@ -1,0 +1,17 @@
+{
+ "type": "result",
+ "subtype": "success",
+ "is_error": false,
+ "result": "{\"cards\":[{\"title\":\"Hand in the essay (Teacher, Essay)\",\"due\":\"2026-10-22\",\"item_id\":1}]}",
+ "structured_output": {
+  "cards": [
+   {
+    "title": "Hand in the essay (Teacher, Essay)",
+    "due": "2026-10-22",
+    "item_id": 1
+   }
+  ]
+ },
+ "num_turns": 2,
+ "stop_reason": "tool_use"
+}

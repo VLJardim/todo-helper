@@ -1,0 +1,37 @@
+[package]
+name = "todo-helper"
+version = "0.1.0"
+description = "Kanban board that collects todos from Outlook, Discord, and itslearning"
+authors = ["VLJardim"]
+edition = "2024"
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "todo_helper_lib"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+chrono = "0.4.45"
+keyring = "3"
+ureq = { version = "2", features = ["json"] }
+tauri-plugin-single-instance = "2"
+
+# Secrets go to the system's own password store: Credential Manager on Windows, Keychain on macOS.
+[target.'cfg(windows)'.dependencies]
+keyring = { version = "3", features = ["windows-native"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+keyring = { version = "3", features = ["apple-native"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true

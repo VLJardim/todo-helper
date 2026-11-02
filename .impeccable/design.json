@@ -1,0 +1,297 @@
+{
+ "schemaVersion": 2,
+ "generatedAt": "2026-10-18T18:56:36+00:00",
+ "title": "Design System: todo-helper",
+ "extensions": {
+  "colorMeta": {
+   "accent": {
+    "role": "primary",
+    "displayName": "Ink Blue",
+    "canonical": "oklch(0.5 0.16 262)",
+    "tonalRamp": [
+     "oklch(0.15 0.08 262)",
+     "oklch(0.26 0.1 262)",
+     "oklch(0.37 0.119 262)",
+     "oklch(0.48 0.139 262)",
+     "oklch(0.6 0.16 262)",
+     "oklch(0.72 0.139 262)",
+     "oklch(0.84 0.117 262)",
+     "oklch(0.95 0.098 262)"
+    ]
+   },
+   "mark": {
+    "role": "secondary",
+    "displayName": "Highlighter Yellow",
+    "canonical": "oklch(0.92 0.15 103)",
+    "tonalRamp": [
+     "oklch(0.15 0.075 103)",
+     "oklch(0.26 0.093 103)",
+     "oklch(0.37 0.112 103)",
+     "oklch(0.48 0.13 103)",
+     "oklch(0.6 0.15 103)",
+     "oklch(0.72 0.13 103)",
+     "oklch(0.84 0.11 103)",
+     "oklch(0.95 0.092 103)"
+    ]
+   },
+   "danger": {
+    "role": "tertiary",
+    "displayName": "Correction Red",
+    "canonical": "oklch(0.52 0.19 27)",
+    "tonalRamp": [
+     "oklch(0.15 0.095 27)",
+     "oklch(0.26 0.118 27)",
+     "oklch(0.37 0.141 27)",
+     "oklch(0.48 0.165 27)",
+     "oklch(0.6 0.19 27)",
+     "oklch(0.72 0.165 27)",
+     "oklch(0.84 0.139 27)",
+     "oklch(0.95 0.116 27)"
+    ]
+   },
+   "bg": {
+    "role": "neutral",
+    "displayName": "Cool Paper",
+    "canonical": "oklch(0.975 0.004 250)",
+    "tonalRamp": [
+     "oklch(0.15 0.002 250)",
+     "oklch(0.26 0.002 250)",
+     "oklch(0.37 0.003 250)",
+     "oklch(0.48 0.003 250)",
+     "oklch(0.6 0.004 250)",
+     "oklch(0.72 0.003 250)",
+     "oklch(0.84 0.003 250)",
+     "oklch(0.95 0.002 250)"
+    ]
+   },
+   "panel": {
+    "role": "neutral",
+    "displayName": "Ruled Panel",
+    "canonical": "oklch(0.948 0.006 250)",
+    "tonalRamp": [
+     "oklch(0.15 0.003 250)",
+     "oklch(0.26 0.004 250)",
+     "oklch(0.37 0.004 250)",
+     "oklch(0.48 0.005 250)",
+     "oklch(0.6 0.006 250)",
+     "oklch(0.72 0.005 250)",
+     "oklch(0.84 0.004 250)",
+     "oklch(0.95 0.004 250)"
+    ]
+   },
+   "card": {
+    "role": "neutral",
+    "displayName": "Card White",
+    "canonical": "oklch(1 0 0)",
+    "tonalRamp": [
+     "oklch(0.15 0.0 0)",
+     "oklch(0.26 0.0 0)",
+     "oklch(0.37 0.0 0)",
+     "oklch(0.48 0.0 0)",
+     "oklch(0.6 0.0 0)",
+     "oklch(0.72 0.0 0)",
+     "oklch(0.84 0.0 0)",
+     "oklch(0.95 0.0 0)"
+    ]
+   },
+   "line": {
+    "role": "neutral",
+    "displayName": "Pencil Line",
+    "canonical": "oklch(0.89 0.007 250)",
+    "tonalRamp": [
+     "oklch(0.15 0.004 250)",
+     "oklch(0.26 0.004 250)",
+     "oklch(0.37 0.005 250)",
+     "oklch(0.48 0.006 250)",
+     "oklch(0.6 0.007 250)",
+     "oklch(0.72 0.006 250)",
+     "oklch(0.84 0.005 250)",
+     "oklch(0.95 0.004 250)"
+    ]
+   },
+   "ink": {
+    "role": "neutral",
+    "displayName": "Ink",
+    "canonical": "oklch(0.23 0.012 260)",
+    "tonalRamp": [
+     "oklch(0.15 0.006 260)",
+     "oklch(0.26 0.007 260)",
+     "oklch(0.37 0.009 260)",
+     "oklch(0.48 0.01 260)",
+     "oklch(0.6 0.012 260)",
+     "oklch(0.72 0.01 260)",
+     "oklch(0.84 0.009 260)",
+     "oklch(0.95 0.007 260)"
+    ]
+   },
+   "ink-2": {
+    "role": "neutral",
+    "displayName": "Faded Ink",
+    "canonical": "oklch(0.47 0.014 260)",
+    "tonalRamp": [
+     "oklch(0.15 0.007 260)",
+     "oklch(0.26 0.009 260)",
+     "oklch(0.37 0.01 260)",
+     "oklch(0.48 0.012 260)",
+     "oklch(0.6 0.014 260)",
+     "oklch(0.72 0.012 260)",
+     "oklch(0.84 0.01 260)",
+     "oklch(0.95 0.009 260)"
+    ]
+   },
+   "field": {
+    "role": "neutral",
+    "displayName": "Field Edge",
+    "canonical": "oklch(0.6 0.012 260)",
+    "tonalRamp": [
+     "oklch(0.15 0.012 260)",
+     "oklch(0.26 0.012 260)",
+     "oklch(0.37 0.012 260)",
+     "oklch(0.48 0.012 260)",
+     "oklch(0.6 0.012 260)",
+     "oklch(0.72 0.012 260)",
+     "oklch(0.84 0.012 260)",
+     "oklch(0.95 0.012 260)"
+    ]
+   }
+  },
+  "typographyMeta": {
+   "title": {
+    "displayName": "Title",
+    "purpose": "Card title in the card sheet."
+   },
+   "body": {
+    "displayName": "Body",
+    "purpose": "Card titles, buttons, inputs, navigation."
+   },
+   "note": {
+    "displayName": "Note",
+    "purpose": "The note editor, at most 72 characters wide."
+   },
+   "label": {
+    "displayName": "Label",
+    "purpose": "Counts, due chips, metadata, empty-state hints."
+   }
+  },
+  "shadows": [
+   {
+    "name": "card",
+    "value": "0 1px 2px oklch(0.2 0.01 260 / 0.08), 0 1px 1px oklch(0.2 0.01 260 / 0.04)",
+    "purpose": "Cards at rest."
+   },
+   {
+    "name": "raised",
+    "value": "0 8px 24px oklch(0.2 0.01 260 / 0.14), 0 2px 6px oklch(0.2 0.01 260 / 0.08)",
+    "purpose": "Hovered card, card sheet, dialogs, toasts."
+   }
+  ],
+  "motion": [
+   {
+    "name": "state",
+    "value": "150ms ease",
+    "purpose": "Hover and color transitions."
+   },
+   {
+    "name": "done-swipe",
+    "value": "700ms cubic-bezier(0.16, 1, 0.3, 1)",
+    "purpose": "Highlighter fade on a card that reaches Done. Off under reduced motion."
+   }
+  ],
+  "breakpoints": [
+   {
+    "name": "lg",
+    "value": "1024px",
+    "purpose": "Below this the sidebar collapses to an icon rail."
+   }
+  ]
+ },
+ "components": [
+  {
+   "name": "Primary Button",
+   "kind": "button",
+   "refersTo": "button-primary",
+   "description": "The one main action in a view, such as New note.",
+   "html": "<button class=\"ds-btn-primary\">New note</button>",
+   "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:6px;background:var(--accent,oklch(0.5 0.16 262));color:var(--accent-ink,#fff);border:0;border-radius:8px;padding:6px 12px;font:500 14px 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif;transition:filter .15s}.ds-btn-primary:hover{filter:brightness(1.1)}.ds-btn-primary:focus-visible{outline:2px solid var(--accent,oklch(0.5 0.16 262));outline-offset:2px}"
+  },
+  {
+   "name": "Secondary Button",
+   "kind": "button",
+   "refersTo": "button-secondary",
+   "description": "Supporting actions such as Add a note and Cancel.",
+   "html": "<button class=\"ds-btn-secondary\">Add a note</button>",
+   "css": ".ds-btn-secondary{background:var(--card,#fff);color:var(--ink,oklch(0.23 0.012 260));border:1px solid var(--line,oklch(0.89 0.007 250));border-radius:8px;padding:6px 12px;font:500 14px 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif;transition:background .15s}.ds-btn-secondary:hover{background:var(--panel,oklch(0.948 0.006 250))}.ds-btn-secondary:focus-visible{outline:2px solid var(--accent,oklch(0.5 0.16 262));outline-offset:2px}"
+  },
+  {
+   "name": "Danger Button",
+   "kind": "button",
+   "refersTo": "button-danger",
+   "description": "Delete card and Delete note.",
+   "html": "<button class=\"ds-btn-danger\">Delete card</button>",
+   "css": ".ds-btn-danger{background:transparent;color:var(--danger,oklch(0.52 0.19 27));border:0;border-radius:8px;padding:6px 12px;font:500 14px 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif;transition:background .15s}.ds-btn-danger:hover{background:color-mix(in oklch,var(--danger,oklch(0.52 0.19 27)) 12%,transparent)}.ds-btn-danger:focus-visible{outline:2px solid var(--accent,oklch(0.5 0.16 262));outline-offset:2px}"
+  },
+  {
+   "name": "Card",
+   "kind": "card",
+   "refersTo": "card",
+   "description": "A todo on the board, with a due chip.",
+   "html": "<div class=\"ds-card\" tabindex=\"0\"><span>Hand in essay</span><span class=\"ds-chip-today\">Due today</span></div>",
+   "css": ".ds-card{display:flex;flex-direction:column;gap:6px;width:240px;background:var(--card,#fff);color:var(--ink,oklch(0.23 0.012 260));border-radius:8px;padding:10px 12px;font:400 14px/1.375 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif;box-shadow:0 1px 2px oklch(0.2 0.01 260/.08),0 1px 1px oklch(0.2 0.01 260/.04);transition:box-shadow .15s;cursor:grab}.ds-card:hover{box-shadow:0 8px 24px oklch(0.2 0.01 260/.14),0 2px 6px oklch(0.2 0.01 260/.08)}.ds-card:focus-visible{outline:2px solid var(--accent,oklch(0.5 0.16 262));outline-offset:2px}.ds-chip-today{align-self:flex-start;background:var(--mark,oklch(0.92 0.15 103));color:var(--mark-ink,oklch(0.3 0.06 100));border-radius:4px;padding:0 4px;font:500 12px 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif}"
+  },
+  {
+   "name": "Input",
+   "kind": "input",
+   "refersTo": "input",
+   "description": "The add-card field at the top of Inbox.",
+   "html": "<input class=\"ds-input\" placeholder=\"Add a card and press Enter\">",
+   "css": ".ds-input{width:240px;background:var(--card,#fff);color:var(--ink,oklch(0.23 0.012 260));border:1px solid var(--field,oklch(0.6 0.012 260));border-radius:8px;padding:8px 12px;font:400 14px 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif;transition:border-color .15s}.ds-input::placeholder{color:var(--ink-2,oklch(0.47 0.014 260))}.ds-input:hover{border-color:var(--ink-2,oklch(0.47 0.014 260))}.ds-input:focus{outline:none;border-color:var(--accent,oklch(0.5 0.16 262))}"
+  },
+  {
+   "name": "Navigation Item",
+   "kind": "nav",
+   "refersTo": "nav-item-current",
+   "description": "Sidebar view switcher; the current view is filled.",
+   "html": "<nav class=\"ds-nav\"><button aria-current=\"page\">Board</button><button>Notes</button></nav>",
+   "css": ".ds-nav{display:flex;flex-direction:column;gap:2px;width:168px}.ds-nav button{text-align:left;background:transparent;color:var(--ink-2,oklch(0.47 0.014 260));border:0;border-radius:8px;padding:8px 12px;font:400 14px 'Segoe UI Variable Text','Segoe UI',system-ui,sans-serif;transition:background .15s,color .15s}.ds-nav button:hover{background:var(--panel,oklch(0.948 0.006 250));color:var(--ink,oklch(0.23 0.012 260))}.ds-nav button[aria-current=page]{background:var(--panel,oklch(0.948 0.006 250));color:var(--ink,oklch(0.23 0.012 260));font-weight:600}.ds-nav button:focus-visible{outline:2px solid var(--accent,oklch(0.5 0.16 262));outline-offset:2px}"
+  }
+ ],
+ "narrative": {
+  "northStar": "The Highlighted Planner",
+  "overview": "A student's paper planner: quiet ink on cool paper, where the only loud thing on the page is the highlighter stroke across what is due today. The board stays neutral so the owner's own words carry the screen; color appears only where it changes what to do next.\n\nDensity is moderate. Four equal columns hold cards with one or two lines of text and a single line of quiet metadata. The interface uses the Windows system face and follows the Windows light or dark setting, so it reads as a native tool, not a website. Motion exists once: a card that reaches Done gets a short highlighter swipe, so finishing something registers.",
+  "keyCharacteristics": [
+   "Restrained palette: cool neutrals, one ink-blue accent for actions and focus, one highlighter yellow for \"today\".",
+   "Tonal layering instead of borders: background, then column panel, then white card.",
+   "One type family at four sizes; weight, not size, carries emphasis.",
+   "Every state has a visible form: hover lift, focus ring, drag marker, empty-state hint."
+  ],
+  "rules": [
+   {
+    "name": "The One Highlighter Rule",
+    "body": "Highlighter yellow marks two things only: what is due today, and, for 700ms, a card that has just reached Done. A third use dilutes the signal the owner scans for.",
+    "section": "colors"
+   },
+   {
+    "name": "The Measured Contrast Rule",
+    "body": "Every text and fill pair meets WCAG AA (4.5:1) in both themes, and input borders meet 3:1. The lowest text pair is the overdue chip in dark mode (4.63:1).",
+    "section": "colors"
+   },
+   {
+    "name": "The Lift Means Movable Rule",
+    "body": "Only things you can drag or that float above the board get the raised shadow.",
+    "section": "elevation"
+   }
+  ],
+  "dos": [
+   "Do keep highlighter yellow for \"due today\" and the Done swipe only.",
+   "Do use `ink-2` for secondary text instead of lowering opacity.",
+   "Do give every new interactive element a hover state, the ink-blue focus ring, and a keyboard path.",
+   "Do write empty states that say what to do (\"Drag here what you'll do today.\")."
+  ],
+  "donts": [
+   "Don't add a second accent color or color-code sources; source icons stay in faded ink.",
+   "Don't put borders around cards; the tonal step and the Card shadow separate them.",
+   "Don't add motion other than the Done swipe and short state transitions.",
+   "Don't insert outside text (emails, messages, events) with `innerHTML`."
+  ]
+ }
+}

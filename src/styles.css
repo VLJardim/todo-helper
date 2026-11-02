@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@source not "../.claude";
+@source not "../tasks";
+
+/* Semantic color tokens. Light by default, dark when Windows is set to dark.
+   Ink blue marks what you can act on; highlighter yellow marks what is due now. */
+:root {
+  color-scheme: light dark;
+  --bg: oklch(0.975 0.004 250);
+  --panel: oklch(0.948 0.006 250);
+  --card: oklch(1 0 0);
+  --line: oklch(0.89 0.007 250);
+  --field: oklch(0.6 0.012 260);
+  --ink: oklch(0.23 0.012 260);
+  --ink-2: oklch(0.47 0.014 260);
+  --accent: oklch(0.5 0.16 262);
+  --accent-ink: oklch(0.99 0 0);
+  --mark: oklch(0.92 0.15 103);
+  --mark-ink: oklch(0.3 0.06 100);
+  --danger: oklch(0.52 0.19 27);
+  --danger-ink: oklch(0.99 0 0);
+  /* Deadline cards: violet within the week, orange the day before (red on the day is danger). */
+  --deadline: oklch(0.5 0.17 305);
+  --deadline-ink: oklch(0.99 0 0);
+  --soon: oklch(0.52 0.16 45);
+  --soon-ink: oklch(0.99 0 0);
+  --scrim: oklch(0.2 0.01 260 / 0.35);
+  --shadow-card: 0 1px 2px oklch(0.2 0.01 260 / 0.08), 0 1px 1px oklch(0.2 0.01 260 / 0.04);
+  --shadow-raised: 0 8px 24px oklch(0.2 0.01 260 / 0.14), 0 2px 6px oklch(0.2 0.01 260 / 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: oklch(0.185 0.008 260);
+    --panel: oklch(0.225 0.009 260);
+    --card: oklch(0.275 0.01 260);
+    --line: oklch(0.345 0.011 260);
+    --field: oklch(0.56 0.012 260);
+    --ink: oklch(0.94 0.005 260);
+    --ink-2: oklch(0.74 0.012 260);
+    --accent: oklch(0.75 0.12 262);
+    --accent-ink: oklch(0.2 0.03 262);
+    --mark: oklch(0.82 0.14 100);
+    --mark-ink: oklch(0.22 0.04 100);
+    --danger: oklch(0.72 0.15 25);
+    --danger-ink: oklch(0.2 0.03 25);
+    --deadline: oklch(0.76 0.12 305);
+    --deadline-ink: oklch(0.2 0.03 305);
+    --soon: oklch(0.78 0.14 55);
+    --soon-ink: oklch(0.2 0.04 55);
+    --scrim: oklch(0.08 0.01 260 / 0.55);
+    --shadow-card: 0 1px 2px oklch(0 0 0 / 0.3);
+    --shadow-raised: 0 12px 32px oklch(0 0 0 / 0.45), 0 2px 6px oklch(0 0 0 / 0.3);
+  }
+}
+
+@theme inline {
+  --font-sans: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-field: var(--field);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-mark: var(--mark);
+  --color-mark-ink: var(--mark-ink);
+  --color-danger: var(--danger);
+  --color-danger-ink: var(--danger-ink);
+  --color-deadline: var(--deadline);
+  --color-deadline-ink: var(--deadline-ink);
+  --color-soon: var(--soon);
+  --color-soon-ink: var(--soon-ink);
+  --shadow-card: var(--shadow-card);
+  --shadow-raised: var(--shadow-raised);
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    caret-color: var(--accent);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) transparent;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--accent) 30%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  ::placeholder {
+    color: var(--ink-2);
+  }
+  dialog::backdrop {
+    background: var(--scrim);
+  }
+}
+
+/* The one authored moment: a card that reaches Done gets a highlighter swipe. */
+@keyframes done-swipe {
+  from {
+    background-color: var(--mark);
+    color: var(--mark-ink);
+  }
+}
+.done-swipe {
+  animation: done-swipe 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .done-swipe {
+    animation: none;
+  }
+}
