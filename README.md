@@ -27,7 +27,13 @@ After you install the app, connect your sources with [SETUP.md](SETUP.md), from 
 
 The email and Discord sources need Claude Code. Outlook works only with classic Outlook on Windows.
 
-To build the app yourself instead, follow SETUP.md section 1. You need Node.js 22 or later and Rust.
+## Build it yourself
+
+You don't have to use the installer. You can always download the whole project and build the app on your own computer, so you can read every line of code that runs.
+
+1. Get the code: `git clone https://github.com/VLJardim/todo-helper.git`, or select **Code**, then **Download ZIP** at the top of this page.
+2. Install Node.js 22 or later and Rust.
+3. Follow [SETUP.md](SETUP.md) section 1. The build takes about 10 minutes.
 
 ## Stack
 
